@@ -104,21 +104,21 @@ def main():
         if won == True:
             level+=1
             return level
-    # def scoreChange(level):
-    #     f2 = open('highscore.txt', 'r')
-    #     v = f2.read()
-    #     f2.close()
-    #     v = v.split(' ')
-    #     oldScore = int(v[0])
-    #     if level > oldScore:
-    #         f = open('highscore.txt', 'r')
-    #         lines = f.readlines()
-    #         f.close()
-    #         f = open("highscore.txt", "w")
-    #         lines = str(level)
-    #         f.write(lines)
-    #         f.close()
-    #         oldScore = level
+    def scoreChange(level):
+        f2 = open('highscore.txt', 'r')
+        v = f2.read()
+        f2.close()
+        v = v.split(' ')
+        oldScore = int(v[0])
+        if level > oldScore:
+            f = open('highscore.txt', 'r')
+            lines = f.readlines()
+            f.close()
+            f = open("highscore.txt", "w")
+            lines = str(level)
+            f.write(lines)
+            f.close()
+            oldScore = level
 
     # while not stop_game:  
 
